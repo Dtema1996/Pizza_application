@@ -1,0 +1,41 @@
+@value violetLikeColor, grayishColor from '../../../../assets/colors.css';
+
+.radioContainer {
+  position: relative;
+  margin: 10px 0 0;
+}
+
+.radioContainer input[type='radio'] {
+  display: none;
+}
+
+.radioContainer label {
+  color: grayishColor;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.radioContainer label::before {
+  content: ' ';
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin: 0 5px 0 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 11px;
+  border: 2px solid violetLikeColor;
+  background-color: transparent;
+}
+
+.radioContainer input[type='radio']:checked + label::after {
+  border-radius: 11px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  content: ' ';
+  display: block;
+  background: violetLikeColor;
+}

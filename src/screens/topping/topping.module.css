@@ -1,0 +1,99 @@
+.animation {
+  opacity: 0;
+  animation: fadeIn 500ms ease-in-out forwards;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-height: 280px;
+  composes: animation;
+}
+
+.pickerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.baseImg {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.inputLabel {
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.bacon {
+  composes: baseImg;
+  background-image: url('./assets/bacon.png');
+}
+
+.blackOlive {
+  composes: baseImg;
+  background-image: url('./assets/black_olive.png');
+}
+
+.cheese {
+  composes: baseImg;
+  background-image: url('./assets/cheese.png');
+}
+
+.greenPepper {
+  composes: baseImg;
+  background-image: url('./assets/green_pepper.png');
+}
+
+.mushroom {
+  composes: baseImg;
+  background-image: url('./assets/mushroom.png');
+}
+
+.onion {
+  composes: baseImg;
+  background-image: url('./assets/onion.png');
+}
+
+.pepperoni {
+  composes: baseImg;
+  background-image: url('./assets/pepperoni.png');
+}
+
+.pineapple {
+  composes: baseImg;
+  background-image: url('./assets/pineapple.png');
+}
+
+.sausage {
+  composes: baseImg;
+  background-image: url('./assets/sausage.png');
+}
+
+.spinach {
+  composes: baseImg;
+  background-image: url('./assets/spinach.png');
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

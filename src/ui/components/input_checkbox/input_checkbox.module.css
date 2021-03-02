@@ -1,0 +1,24 @@
+.baseLabel {
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.unselected {
+  composes: baseLabel;
+  background-image: url('./assets/light_unselected_checkbox.png');
+}
+
+.selected {
+  composes: baseLabel;
+  background-image: url('./assets/light_selected_checkbox.png');
+}
+
+.checkbox {
+  visibility: hidden;
+  position: absolute;
+}
